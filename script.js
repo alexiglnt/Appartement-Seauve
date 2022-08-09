@@ -76,3 +76,22 @@ window.addEventListener("load", () => {
     navLinks[index].classList.add("marked")
   }
 })
+
+
+// Animation au démarrage
+const btns = document.querySelectorAll('.btn-first');
+const appartTitle = document.getElementById('appart');
+const description = document.querySelector('.description');
+
+window.addEventListener('load', () => {
+
+  const TL = gsap.timeline({paused: true});
+  
+  TL
+  .staggerFrom(btns, 1, {top: -50, opacity: 0, ease: "power2.out"}, 0.3)
+  .staggerFrom(appartTitle, 1, {top: -50, opacity: 0, ease: "power2.out"}, 0.3, '-=0.5')
+  .staggerFrom(description, 1, {top: -50, opacity: 0, ease: "power2.out"}, 0.3, '-=0.25')
+  
+  
+  TL.play();
+  })
