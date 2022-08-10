@@ -95,3 +95,22 @@ window.addEventListener('load', () => {
   
   TL.play();
   })
+
+
+// HAMBURGER
+const hamburgerButton = document.querySelector('.hamburger-btn');
+const navbar = document.querySelector('#navbar');
+
+hamburgerButton.addEventListener('click', () => {
+  navbar.classList.toggle('active');
+});
+
+const a1 = document.querySelector('.a1');
+const a2 = document.querySelector('.a2');
+const a3 = document.querySelector('.a3');
+const a4 = document.querySelector('.a4');
+
+a1.addEventListener("click", () => { navbar.classList.remove('active'); });
+a2.addEventListener("click", () => { navbar.classList.remove('active'); });
+a3.addEventListener("click", () => { navbar.classList.remove('active'); });
+a4.addEventListener("click", () => { navbar.classList.remove('active'); });

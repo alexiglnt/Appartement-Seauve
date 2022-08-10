@@ -277,3 +277,148 @@ nav a.marked::after {
     transform: translateY(5px);
     margin: 0 5px;  
 }
+
+/* HAMBURGER BUTTON */
+.hamburger-btn {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 17.5px;
+    left: 17.5px;
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s ease;
+    z-index: 3000;
+    
+    display: none;
+}
+
+.hamburger-btn:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+@media screen and (max-width:1100px) 
+{
+    .hamburger-btn {
+        display: block;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    header {
+        top: 0;
+        left: 0;
+        background-color: #000;
+        width: 100%;
+        height: 70px;
+        position: fixed;
+        z-index: 3000;
+    }
+
+    #navbar {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: auto 0;
+        background-color: rgba(0, 0, 0, 0.847);
+        backdrop-filter: blur(8px);
+        margin-left: -200%;
+        transition: all 0.8s;
+    }
+
+    #navbar.active {
+        margin-left: 0;
+        transition: all 0.8s;
+    }
+    
+    #navbar a {
+        color: rgb(169, 169, 169);
+        text-decoration: none;
+        font-size: 20px;
+        margin: 10px 0;
+        padding: 0;
+        width: 200px;
+    }
+
+    .content-section h2 {
+        font-size: 25px;
+        margin-bottom: 15px;
+        
+    }
+
+    .documentation-container {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex; 
+        padding: 0 10px;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .description {
+        margin: 0px auto;
+        max-width: 1000px; 
+    }
+    
+    .text-description {
+        border: none;
+    }
+    
+    .text-description a {
+        text-decoration: none;
+        color: blue;
+    }
+    
+    .text-description a span {
+        transform: translateY(6px);
+    }
+    
+    .title-description {
+        margin: 0px 0px;
+        width: 170px;
+        transform: translateY(25px) translateX(40px);
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #img-commune-cont h2 {
+        color: #f1f1ff;
+        margin: 10px 10px;
+        font-size: 20px;
+    }
+    
+    #commune-container {
+        margin: 50px auto;
+        max-width: 1000px;
+    }
+
+    #mail a {
+        font-size: 25px;
+    }
+
+    #contact p {
+        font-size: 10px;
+    }
+
+    #contact p a {
+        transform: translateY(2px);
+    }
+
+    #contact p a span {
+        font-size: 12px;
+        transform: translateY(2px);
+        margin: 0 2px;
+    }
+}
