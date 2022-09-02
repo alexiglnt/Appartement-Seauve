@@ -2,6 +2,8 @@ const sections = [...document.querySelectorAll(".content-section")]
 const navLinks = [...document.querySelectorAll("nav a")]
 const documentationContainer = document.querySelector(".documentation-content")
 
+
+/********************************************************* NAVIGATION SCROLL *************************************************************** */
 window.addEventListener("load", () => {
   let data = sections.map(section => section.offsetTop)
   console.log(data);
@@ -97,7 +99,9 @@ window.addEventListener('load', () => {
   })
 
 
-// HAMBURGER
+
+
+/********************************************************* HAMBURGER *************************************************************** */
 const hamburgerButton = document.querySelector('.hamburger-btn');
 const navbar = document.querySelector('#navbar');
 
@@ -114,3 +118,26 @@ a1.addEventListener("click", () => { navbar.classList.remove('active'); });
 a2.addEventListener("click", () => { navbar.classList.remove('active'); });
 a3.addEventListener("click", () => { navbar.classList.remove('active'); });
 a4.addEventListener("click", () => { navbar.classList.remove('active'); });
+
+
+
+/********************************************************* SCROLL TO *************************************************************** */
+const nav1 = document.querySelector('#nav1');
+const nav2 = document.querySelector('#nav2');
+const nav3 = document.querySelector('#nav3');
+const nav4 = document.querySelector('#nav4');
+
+const appart = document.querySelector('#appart');
+const immeuble = document.querySelector('#imm');
+const commune = document.querySelector('#comm');
+const contact = document.querySelector('#conta');
+
+nav1.addEventListener('click', () => { navigateScrollIntoView(appart) });
+nav2.addEventListener('click', () => { navigateScrollIntoView(immeuble) });
+nav3.addEventListener('click', () => { navigateScrollIntoView(commune) });
+nav4.addEventListener('click', () => { navigateScrollIntoView(contact) });
+
+
+function navigateScrollIntoView(el) {
+  el.scrollIntoView({behavior:"smooth"});
+}

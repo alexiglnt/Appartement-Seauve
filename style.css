@@ -123,6 +123,7 @@ nav a.marked::after {
     text-decoration: none;
     font-size: 20px;
     margin: 10px auto;
+    cursor: pointer;
 }
 
 #navbar a:hover {
