@@ -122,6 +122,10 @@ a4.addEventListener("click", () => { navbar.classList.remove('active'); });
 
 
 /********************************************************* SCROLL TO *************************************************************** */
+
+// Initialisation de la librairie pour l'animation au  scroll
+AOS.init();
+
 const nav1 = document.querySelector('#nav1');
 const nav2 = document.querySelector('#nav2');
 const nav3 = document.querySelector('#nav3');
